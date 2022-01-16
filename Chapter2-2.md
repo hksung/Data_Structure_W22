@@ -11,7 +11,7 @@
 - The running time of the algorithm is the sum of running times for each statement executed; a statement that takes ci steps to execute and executes n times will contribute ci*n* to the total running time. To compute T(n), the running time of Insertion-sort on an input of *n* values, we sum the products of the cost and times columns, obtaining
 
 <img width="498" alt="image" src="https://user-images.githubusercontent.com/84297888/149681447-c92400f0-2cb9-48e3-9884-26b4d5608d55.png">
-<img width="501" alt="image" src="https://user-images.githubusercontent.com/84297888/149681460-8703bcc4-57c8-4c41-9c58-4dae52c4bc5d.png">
+
 
 - We can express this running times as *an+b* for constants a and b that depend on the statement costs Ci; this is thus a linear function of n.
 
