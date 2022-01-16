@@ -6,4 +6,4 @@
 # Contents
 - [Chapter2_1: Insertion Sort](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-1.md)
 - [Chapter2_1: Exercise](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-1_ex.md)
-- Chapter2_2: Algorithm
+- [Chapter2_2: Analyzing Algorithm](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-2.md)
