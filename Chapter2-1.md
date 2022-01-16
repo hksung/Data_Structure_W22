@@ -1,4 +1,4 @@
-## Introductino to Algorithm _ Chapter 2-1. Insertion Sort 
+## Introduction to Algorithm _ Chapter 2-1. Insertion Sort 
 
 ### Insertion Sort
 
