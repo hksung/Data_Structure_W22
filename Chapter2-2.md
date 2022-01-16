@@ -6,17 +6,17 @@
 
 - Running time: of an algorithm on a particular input is the number of primitive operations or 'steps' executed.
 
-![image.png](attachment:image.png)
+<img width="502" alt="image" src="https://user-images.githubusercontent.com/84297888/149681429-a0eb5af7-9f0c-44e1-bd9b-435bb4091d23.png">
 
 - The running time of the algorithm is the sum of running times for each statement executed; a statement that takes ci steps to execute and executes n times will contribute ci*n* to the total running time. To compute T(n), the running time of Insertion-sort on an input of *n* values, we sum the products of the cost and times columns, obtaining
 
-![image-2.png](attachment:image-2.png)
-![image-3.png](attachment:image-3.png)
+<img width="498" alt="image" src="https://user-images.githubusercontent.com/84297888/149681447-c92400f0-2cb9-48e3-9884-26b4d5608d55.png">
+<img width="501" alt="image" src="https://user-images.githubusercontent.com/84297888/149681460-8703bcc4-57c8-4c41-9c58-4dae52c4bc5d.png">
 
 - We can express this running times as *an+b* for constants a and b that depend on the statement costs Ci; this is thus a linear function of n.
 
-![image-4.png](attachment:image-4.png)
-![image-5.png](attachment:image-5.png)
+<img width="185" alt="image" src="https://user-images.githubusercontent.com/84297888/149681473-6576d483-f603-434a-923f-0eac93a30d59.png">
+<img width="524" alt="image" src="https://user-images.githubusercontent.com/84297888/149681489-fd1dd5f4-58ff-41fb-844f-5795e6475374.png">
 
 - We can express this worse-case running times as an^2+bn+c for constants a, b, and c that again depend on the statement costs ci; it is thus a quadratic function of n.
 
