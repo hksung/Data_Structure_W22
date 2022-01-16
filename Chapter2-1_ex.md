@@ -6,12 +6,16 @@ Using Figure 2.2 as a model, illustrate the operation of INSERTION-SORT on the a
     <summary> answer </summary>
     <div> 
 The changes of array A are like the following based on the suggested model:
-A = <31, 41, 59, 26, 41, 58>
-A = <31, 41, 59, 26, 41, 58>
-A = <31, 41, 59, 26, 41, 58>
-A = <26, 31, 41, 59, 41, 58>
-A = <26, 31, 41, 41, 59, 58>
-A = <25, 31, 41, 41, 58, 59>
+        
+1. A = <31, 41, 59, 26, 41, 58>
+        
+2. A = <31, 41, 59, 26, 41, 58>
+   
+3. A = <31, 41, 59, 26, 41, 58>
+
+4. A = <26, 31, 41, 59, 41, 58>
+5. A = <26, 31, 41, 41, 59, 58>
+6. A = <25, 31, 41, 41, 58, 59>
         </div>
         </details>
 
@@ -41,18 +45,6 @@ for i in range(len(arr)):
     print("%d" %arr[i])
 ```
 
-    sorted array is:
-    35
-    34
-    23
-    13
-    12
-    11
-    5
-    5
-    4
-    3
-    3
 
 
 ### 2.1-3
@@ -61,7 +53,7 @@ Consider the searching problem:
 - Input: A sequence of n numbers A = <a1, a2, ... an> and a value v.
 - Output: An index i such that v = A[i] or the special value NIL if v does not appear in A.
 
-Q. Write pseudocode for linear search, which scans through the sequence, looking for v. Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulfills the three necessary properties.
+Q. Write pseudocode for linear search, which scans through the sequence, looking for v. Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulfills the three necessary properties. (The following is the python code.)
 
 
 ```python
@@ -70,20 +62,11 @@ def linear_search(A,v):
         if A[i] == v:
             return i
         return "NIL" 
-```
 
-
-```python
+#test
 A = [12, 11, 13, 4, 3, 3, 5, 34, 35, 5, 23]
-
-linear_search(A, 100)
+linear_search(A, 100)        
 ```
-
-
-
-
-    'NIL'
-
 
 
 - Loop invariant: At the start of each iteration of the for loop, the subarray consists of elements that are different than v.
@@ -98,7 +81,8 @@ linear_search(A, 100)
 
 Consider the problem of adding two n-bit binary integers, stored in two n-element arrays A and B. The sum of the two integers should be stored in binary form in an (n+1)-element array C. State the problem formally and write pseudocode for adding the two integers.
 
-
+``` 
+pseudocode
 ADD-BINARY(A, B)
  C = new integer[A.length + 1]
  carry = 0
@@ -107,17 +91,5 @@ ADD-BINARY(A, B)
  carry = (A[i] + B[i] + carry) / 2 // quotient
  C[i + 1] = carry
  return C
-
-
-```python
-def add_binary (A,B):
-    C = int
-    carry = 0
-    for i in range(1, len(A)):
-    
-        C[i] = (A[i] + B[i] + carry) %2
-        carry = (A[i] + B[i] + carry) / 2
-        C[i+1]= carry
-      
-        return C
 ```
+
