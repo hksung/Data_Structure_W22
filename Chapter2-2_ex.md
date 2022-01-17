@@ -63,13 +63,13 @@ selectionsort(A)
 ```
 
 #### Loop invariant
-    At the start of each iteration of the outer for loop, the subarray A[1...i-1] consists of i-1 
-    smallest elements of A, sorted in increasing order.
+    At the start of each iteration of the outer for loop, the subarray A[1...i-1] consists of i-1 smallest elements of A, 
+    sorted in increasing order.
 
 #### Why only first N-1 elements
-    The algorithm needs to run for only the first n-1 elements, rather than for all n elements 
-    because the last iteration will compare A[n] with the minimum element in A[1...n-1] and swap them 
-    if necessary. So, there is no need to continue the algorithm for all the way to the last element.
+    The algorithm needs to run for only the first n-1 elements, rather than for all n elements because the last iteration will 
+    compare A[n] with the minimum element in A[1...n-1] and swap them if necessary. So, there is no need to continue the algorithm 
+    for all the way to the last element.
 
 #### Running times
     The algorithm will take one element at a time and compare it will all the other elements. 
