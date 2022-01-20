@@ -9,12 +9,15 @@
     - POP: deletion operation, which does not take an element argument
 
 - Figure 10.1
+<img width="537" alt="image" src="https://user-images.githubusercontent.com/84297888/150425168-09fa031f-1dc6-49ce-b660-b3de6c38abaa.png">
 
 #### Queue
     - ENQUEUE: insertion operation
     - DEQUEUE: deletion operation
     
 - Figure 10.2
+<img width="315" alt="image" src="https://user-images.githubusercontent.com/84297888/150425205-b3c5d582-a8c2-43a6-97e2-90257ac3902e.png">
+
 - examplary code (linked list - queue, 백준 10845) [reference](https://as-j.tistory.com/96)
 
 
@@ -98,9 +101,9 @@ if __name__ == "__main__":
 Using Figure 10.1 as a model, illustrate the result of each operation in the sequence PUSH(S,4), PUSH(S, 1), PUSH(S, 3), POP(S), PUSH(S, 8), and POP(S) on an initially empty stack S stored in array S[1...6].
 
 <details>
-    <div>
     <summary> Answer </summary>
-- image
+    <div>
+<img width="197" alt="image" src="https://user-images.githubusercontent.com/84297888/150425390-3700c742-873e-47c8-b571-070513725f1b.png">
     </div>
     </details>
 
@@ -110,8 +113,8 @@ Using Figure 10.1 as a model, illustrate the result of each operation in the seq
 Explain how to implement two stacks in one array A[1...n] in such a way that neither stack overflows(full) unless the total number of elements in both stacks together is n. The PUSH and POP operations should run in O(1) time.
 
 <details>
-    <div>
     <summary> Answer </summary>
+    <div>
 - The first stack starts at 1 and grows up towards n, while the second starts from n and grows down towards 1. Stack overflow happens when an element is pushed when two stack pointers are adjacent.
     </div>
     </details>
@@ -121,9 +124,9 @@ Explain how to implement two stacks in one array A[1...n] in such a way that nei
 Using Figure 10.2 as a model, illustrate the result of each operation in the sequence ENQUEUE(Q,4), ENQUEUE(Q,1), ENQUEUE(Q,3), DEQUEUE(Q), ENQUEUE(Q, 8), and DEQUEUE(Q) on an initially empty queue Q stored in array Q[1...6].
 
 <details>
-    <div>
     <summary> Answer </summary>
-- image
+    <div>
+<img width="274" alt="image" src="https://user-images.githubusercontent.com/84297888/150425514-5bfea9e3-c030-489e-bae8-e5f4dcd750fc.png">
     </div>
     </details>
 
