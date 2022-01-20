@@ -8,3 +8,4 @@
 - [Chapter2_1: Exercise](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-1_ex.md)
 - [Chapter2_2: Analyzing Algorithm](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-2.md)
 - [Chapter2_2: Exercise](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-2_ex.md)
+- [Chapter10_1: Stack, Queue, Exercise(~5)](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter10-1.md)
