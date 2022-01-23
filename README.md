@@ -12,3 +12,6 @@
 
 # Coding Assignments
 - [Assigment0: complex number](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p0.py)
+- [test_p0](https://github.com/hksung/Data_Structure_Win22/blob/main/p0_test.py)
+- [Assigment0: complex number](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p1.py)
+- [test_p1](https://github.com/hksung/Data_Structure_Win22/blob/main/p1_test.py)
