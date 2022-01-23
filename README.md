@@ -8,12 +8,12 @@
 - [Chapter2_1: Exercise](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-1_ex.md)
 - [Chapter2_2: Analyzing Algorithm](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-2.md)
 - [Chapter2_2: Exercise](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-2_ex.md)
-- [loop_invariant_exmple](https://github.com/hksung/Data_Structure_Win22/blob/main/loopInv.pdf)
-- [loop_invariant_exmple2](https://github.com/hksung/Data_Structure_Win22/blob/main/loop-invariant.pdf)
+- [loop invariant exmple](https://github.com/hksung/Data_Structure_Win22/blob/main/loopInv.pdf)
+- [loop invariant exmple2](https://github.com/hksung/Data_Structure_Win22/blob/main/loop-invariant.pdf)
 - [Chapter10_1: Stack, Queue, Exercise(~5)](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter10-1.md)
 
 # Coding Assignments
 - [Assigment0: complex number](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p0.py)
 - [test_p0](https://github.com/hksung/Data_Structure_Win22/blob/main/p0_test.py)
-- [Assigment0: complex number](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p1.py)
+- [Assigment1: stack & queue - linked list](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p1.py)
 - [test_p1](https://github.com/hksung/Data_Structure_Win22/blob/main/p1_test.py)
