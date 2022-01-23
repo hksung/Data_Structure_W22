@@ -3,9 +3,9 @@
 """
 Created on Fri Jan 14 13:01:11 2022
 
-Program: project 1 - Stacks and Queues
+Program: project1 - Stacks and Queues
 Author: Hakyung Sung
-Submit date: 01/22/21
+Submit date: 01/23/21
 Description: a program that creates linear data structures of stacks and queues
 			using a linked list data structure as a base
 """
@@ -15,7 +15,7 @@ Description: a program that creates linear data structures of stacks and queues
 prep: classes for error handling
 '''
 
-# Exceptions raised when both queue/stack are full or empty
+# Exceptions raised when there is error
 
 class QueueCapacityTypeError(Exception):
 	pass
@@ -47,7 +47,10 @@ Task1: Write the  Node class
 
 class Node:
 
-	# Function to initialize the node object	
+	'''
+	makes a node for a given data
+	'''
+	
 	def __init__(self, data):
 		self.data = data 		# contains the data for a given node
 		self.next = None 		# contains a pointer to the next node
@@ -60,7 +63,7 @@ class Queue():
 
 	'''
 	creates Queue class using linked list
-	including basically Enqueue and Dequeue methods
+	including basically enqueue, dequeue, front methods
 	'''
 
 	def __init__(self, capacity=0):
@@ -84,7 +87,7 @@ class Queue():
 		returns True/False depending of it the queue is full or not
 		'''
 		
-		if self.currentsize == self.capacity:
+		if self.currentsize == self.capacity:	# specifies the condition for full
 			return True
 		else:
 			return False
@@ -94,7 +97,7 @@ class Queue():
 		'''
 		returns True/False depending of it the queue is empty or not
 		'''
-		if self.currentsize ==0:
+		if self.currentsize ==0:	# specifies the condition for empty
 			return True
 		else:
 			return False
@@ -102,7 +105,7 @@ class Queue():
 		
 	def enqueue(self, item):
 		'''
-		adds an item to the queue.
+		adds an item to the queue
 		returns True/False depending on if the enqueue was successful
 		'''
 		item_add = Node(item)
@@ -117,14 +120,14 @@ class Queue():
 			else:						# enqueue when the queue is neither empty nor full
 				self.tail.next = item_add
 				self.tail = item_add
-			self.currentsize +=1
+			self.currentsize +=1		# adds to the current size
 			return True
 
 	
 	def dequeue(self):
 		'''
-		removes an item from the queue.
-		returns the removed item.
+		removes an item from the queue
+		returns the removed item
 		'''
 		returnValue = None
 		
@@ -137,10 +140,11 @@ class Queue():
 				self.tail = None
 			else:						# dequeue when more than one element
 				returnValue = self.head.data
+				
 				tempv = self.head
 				self.head = self.head.next
 				tempv.next = None
-			self.currentsize -=1
+			self.currentsize -=1		# subtracts from the current size
 			return returnValue
 	
 
@@ -163,7 +167,7 @@ class Stack():
 
 	'''
 	creates Stack class using linked list
-	including basically Push and Pop methods
+	including basically push, pop, peek methods
 	'''
 
 	def __init__(self, capacity=0):
@@ -185,7 +189,7 @@ class Stack():
 		'''
 		returns True/False depending of it the stack is full or not
 		'''
-		if self.currentsize == self.capacity:
+		if self.currentsize == self.capacity:	# specifies the condition for full
 			return True
 		else:
 			return False
@@ -195,7 +199,7 @@ class Stack():
 		'''
 		returns True/False depending of it the stack is empty or not
 		'''
-		if self.currentsize == 0:
+		if self.currentsize == 0:	# specifies the condition for empty
 			return True
 		else:
 			return False
@@ -203,7 +207,7 @@ class Stack():
 		
 	def push(self, item):
 		'''
-		adds an item to the stack.
+		adds an item to the stack
 		returns True/False depending on if the push was successful
 		'''
 		item_add = Node(item)
@@ -215,14 +219,14 @@ class Stack():
 			new_node = item_add
 			new_node.next = self.head
 			self.head = new_node
-			self.currentsize += 1
+			self.currentsize += 1		# adds to the current size
 			return True
 
 	
 	def pop(self):
 		'''
-		removes an item from the stack.
-		returns the removed item.
+		removes an item from the stack
+		returns the removed item
 		'''
 		returnValue = None
 		
@@ -237,17 +241,16 @@ class Stack():
 				returnValue = self.head.data
 				
 				self.head = self.head.next
-			self.currentsize -=1
+			self.currentsize -=1		# subtracts from the current size
 			return returnValue
 	
 
 	def peek(self):
 		'''
 		peaks an item from the stack without deleting it
-		returns the item at the front or return False if the queue is empty
+		returns the item at the front or return False if the stack is empty
 		'''		
-		if self.isEmpty():		# raises an QueueIsEmpty exception if empty
-			raise StackIsEmpty("The method is called when the queue is empty.")
+		if self.isEmpty():		# raises an StackIsEmpty exception if empty
+			raise StackIsEmpty("The method is called when the stack is empty.")
 		else:
 			print(self.head.data)
-				
