@@ -10,7 +10,7 @@ Submit date: 02/07/22
 Description: a program that implements the max-heap variety of priority queues
 
 """
-	
+
 
 '''
 prep: classes for error handling
@@ -44,7 +44,7 @@ class QueueIsEmpty(Exception):
 class StackCapacityTypeError(Exception):
 	'''
 	This exception gets raised when the stack is given the wrong type
-	'''	
+	'''
 	pass
 
 class StackCapacityBoundError(Exception):
@@ -82,11 +82,9 @@ Task1: Write the  Node class
 '''
 
 class Node:
-
 	'''
 	makes a node for a given data
 	'''
-	
 	def __init__(self, data):
 		self.data = data 		# contains the data for a given node
 		self.next = None 		# contains a pointer to the next node
@@ -106,29 +104,29 @@ class Queue():
 		'''
 		constructor for the queue class initiation including instance variables (head, tail, capacity, currentsize)
 		'''
-		
+
 		if((type(capacity) != int)):
 			raise QueueCapacityTypeError("ERROR: The capacity must be an int") # error handling(1): type
 		elif (capacity <=0):
 			raise QueueCapacityBoundError("ERROR: The capacity must be a positive int.") # error handling(2): bound
-			
+
 		self.head = None			# contains the head of the linked list
 		self.tail = None			# contains the tail of the linked list
 		self.capacity = capacity	# contains the total num of items that can be fit into the queue
 		self.currentSize = 0		# contains the current number of items in the queue
-	
-	
+
+
 	def isFull(self):
 		'''
 		returns True/False depending of it the queue is full or not
 		'''
-		
+
 		if self.currentSize == self.capacity:	# specifies the condition for full
 			return True
 		else:
 			return False
-		
-		
+
+
 	def isEmpty(self):
 		'''
 		returns True/False depending of it the queue is empty or not
@@ -137,18 +135,17 @@ class Queue():
 			return True
 		else:
 			return False
-		
-		
+
+
 	def enqueue(self, item):
 		'''
 		adds an item to the queue
 		returns True/False depending on if the enqueue was successful
 		'''
 		item_add = Node(item)
-		
+
 		if self.isFull():		# raises a QueueIsFull exception if full
 			raise QueueIsFull("The method is called when the queue is full.")
-			return False
 		else:
 			if self.isEmpty():			# enqueue when the queue is empty
 				self.head = item_add
@@ -159,14 +156,14 @@ class Queue():
 			self.currentSize +=1		# adds to the current size
 			return True
 
-	
+
 	def dequeue(self):
 		'''
 		removes an item from the queue
 		returns the removed item
 		'''
 		returnValue = None
-		
+
 		if self.isEmpty():		# raises an QueueIsEmpty exception if empty
 			raise QueueIsEmpty("The method is called when the queue is empty.")
 		else:
@@ -176,22 +173,23 @@ class Queue():
 				self.tail = None
 			else:						# dequeue when more than one element
 				returnValue = self.head.data
-				
+
 				tempv = self.head
 				self.head = self.head.next
 				tempv.next = None
 			self.currentSize -=1		# subtracts from the current size
 			return returnValue
-	
+
+
 	def front(self):
 		'''
 		peaks an item from the queue without deleting it
 		returns the item at the front or return False if the queue is empty
-		'''		
+		'''
 		if self.isEmpty():		# raises an QueueIsEmpty exception if empty
-			raise QueueIsEmpty("The method is called when the queue is empty.")
+			return False
 		else:
-			print(self.head.data)
+			return self.head.data
 
 
 '''
@@ -207,19 +205,19 @@ class Stack():
 
 	def __init__(self, capacity=0):
 		'''
-		constructor for the stack class initiation including instance variables (head, capacity, currentsize)
+		constructor for the stack class initiation including instance variables (head, capacity, currentSize)
 		'''
-		
+
 		if((type(capacity) != int)):
 			raise StackCapacityTypeError("ERROR: The capacity must be an int") # error handling(1): type
 		elif (capacity <=0):
 			raise StackCapacityBoundError("ERROR: The capacity must be a positive int.") # error handling(2): bound
-			
+
 		self.head = None			# contains the head of the linked list
 		self.capacity = capacity	# contains the total num of items that can be fit into the stack
 		self.currentSize = 0		# contains the current number of items in the stack
-	
-	
+
+
 	def isFull(self):
 		'''
 		returns True/False depending of it the stack is full or not
@@ -228,8 +226,8 @@ class Stack():
 			return True
 		else:
 			return False
-		
-		
+
+
 	def isEmpty(self):
 		'''
 		returns True/False depending of it the stack is empty or not
@@ -238,15 +236,15 @@ class Stack():
 			return True
 		else:
 			return False
-		
-		
+
+
 	def push(self, item):
 		'''
 		adds an item to the stack
 		returns True/False depending on if the push was successful
 		'''
 		item_add = Node(item)
-		
+
 		if self.isFull():		# raises a StackIsFull exception if full
 			raise StackIsFull("The method is called when the stack is full.")
 			return False
@@ -257,41 +255,42 @@ class Stack():
 			self.currentSize += 1		# adds to the current size
 			return True
 
-	
+
 	def pop(self):
 		'''
 		removes an item from the stack
 		returns the removed item
 		'''
 		returnValue = None
-		
-		if self.isEmpty():		# raises an StackIsEmpty exception if empty
+
+		if self.isEmpty():		# raises an QueueIsEmpty exception if empty
 			raise StackIsEmpty("The method is called when the stack is empty.")
 		else:
-			if self.currentSize == 1:	# pop when only one element exists
+			if self.currentSize == 1:	# dequeue when only one element exists
 				returnValue = self.head.data
-				
 				self.head = None
-			else:						# pop when more than one element
+			else:						# dequeue when more than one element
 				returnValue = self.head.data
-				
+
+				tempv = self.head
 				self.head = self.head.next
+				tempv.next = None
 			self.currentSize -=1		# subtracts from the current size
 			return returnValue
-	
+
 
 	def peek(self):
 		'''
 		peaks an item from the stack without deleting it
 		returns the item at the front or return False if the stack is empty
-		'''		
+		'''
 		if self.isEmpty():		# raises an StackIsEmpty exception if empty
-			raise StackIsEmpty("The method is called when the stack is empty.")
+			return False
 		else:
-			print(self.head.data)
+			return self.head.data
 
 '''
-Project2 Starts from here
+Project2 (PriorityQueue) Starts from here
 '''
 
 
@@ -302,30 +301,29 @@ class PriorityQueue:
 	including basically insert, extractMax, and peekMax methods
 	'''
 
-	def __init__(self, capacity=0):
+	def __init__(self, capacity):
 		'''
 		The PQ constructor
 		Inputs: a positive integer for the size
 		Usage: PQ1 = PriorityQueue(<int>)
-		'''	
+		'''
 		if((type(capacity) != int)):
 			raise QueueCapacityTypeError("ERROR: The capacity must be an int") # error handling for type
 		elif (capacity <=0):
 			raise QueueCapacityBoundError("ERROR: The capacity must be a positive int.") # error handling for bound
-			
+
 		self._heap = []
-		self._heapIndices = {} # contains the index as a dictionary format
 		self.capacity = capacity	# contains the total num of items that can be fit into the queue
 		self.currentSize = 0		# contains the current number of items in the queue
-		
-		
+
+
 	def __str__(self):
 		'''
 		Returns a string representation of the heap
 		Format: "[(<prio1>, <item>),(prio2, item), ...]" or "[]" if the PQ is empty
 		'''
 		return str(self._heap)
-	
+
 	def isFull(self):
 		'''
 		Returns True/False depending of it the PQ is full or not
@@ -334,8 +332,7 @@ class PriorityQueue:
 			return True
 		else:
 			return False
-		
-		
+
 	def isEmpty(self):
 		'''
 		Returns True/False depending of it the PQ is empty or not
@@ -344,177 +341,101 @@ class PriorityQueue:
 			return True #len(self.heapList) == 0:
 		else:
 			return False
-		
-	def appendtoheap(self, item):
-		'''
-		Connects the insert method and heapindex dic
-		'''		
-		self._heap.append(item)
-		self._heapIndices[item[1]] = len(self._heap)-1
+
+	def parent(index):
+		return index/2
 
 	def insert(self, item):
 		'''
 		Key method1: This method adds a tupble to the PQ based on its priority,
 		then return True upon successfully adding it to the heap
-		
+
 		Intput: tuple item(s)
 		Usage: returnValue = <insert>.PriorityQueue(<item>)
-		'''	
+		'''
 		returnValue = False
-		
+
 		if self.isFull():		# raises a QueueIsFull exception if PQ is full
 			raise QueueIsFull("The method is called when the PQ is full.")
 		elif type(item) != tuple:		# raises a QueueInputTypeError exception if input is not a tuple
-			raise QueueInputTypeError("The input must be a tuple") 
-		else:	
-			self.appendtoheap(item)
-			self.maxHeapifyUp((len(self._heap)-1))
-		self.currentSize += 1
-		returnValue = True
-		return returnValue
-	
-	def hasParent(self, nodeidx):
-		'''
-		Checks the parent nodeidx
-		'''			
-		if nodeidx > 0:
-			return True
-		
-	def getParentidx(self, nodeidx):
-		'''
-		Gets the parent nodeidx
-		'''			
-		return int((nodeidx-1)/2)
-	
-	def getLeftChildidx(self, nodeidx):
-		'''
-		Gets the leftchild nodeidx
-		'''			
-		return nodeidx*2+1
-	
-	def getRightChildidx(self, nodeidx):
-		'''
-		Gets the rightchild nodeidx
-		'''			
-		return nodeidx*2+2
-	
-	def hasLeftChild(self, nodeidx):
-		'''
-		Checks the leftchild nodeidx
-		'''			
-		if self.getLeftChildidx(nodeidx)<len(self._heap):
-			return True
-		
-	def hasRightChild(self, nodeidx):
-		'''
-		Checks the rightchild nodeidx
-		'''			
-		if self.getRightChildidx(nodeidx) < len(self._heap):
-			return True
-		
-	def parentPriority(self, nodeidx):
-		'''
-		Returns the parent priority
-		'''			
-		return self._heap[self.getParentidx(nodeidx)][0]		
-	
-	def leftChildPriority(self, nodeidx):
-		'''
-		Returns the leftchild priority
-		'''				
-		return self._heap[self.getLeftChildidx(nodeidx)][0]			
-			
-	def rightChildPriority(self, nodeidx):
-		'''
-		Returns the rightchild priority
-		'''			
-		return self._heap[self.getRightChildidx(nodeidx)][0]				
-	
-	def maxHeapifyUp(self, nodeidx):
-		'''
-		Functions for items in the heap go up
-		'''	
-		while(self.hasParent(nodeidx)) and self.parentPriority(nodeidx) < self._heap[nodeidx][0]:
-			self.swap(self.getParentidx(nodeidx), nodeidx)
-			nodeidx = self.getParentidx(nodeidx)
-			
-	def maxHeapifDown(self, nodeidx):
-		'''
-		Functions for items in the heap go down
-		'''		
+			raise QueueInputTypeError("The input must be a tuple")
+		else:
+			self._heap.append(item)
+			index = len(self._heap)-1
 
-		while self.hasLeftChild(nodeidx):
-			biggerChildidx = self.getLeftChildidx(nodeidx)
-			
-			if self.hasRightChild(nodeidx) and self.rightChildPriority(nodeidx) > self.leftChildPriority(nodeidx):
-				biggerChildidx = self.getRightChildidx(nodeidx)
-				
-			if self._heap[nodeidx][0] < self._heap[biggerChildidx][0]:
-				self.swap(nodeidx, biggerChildidx)
-				nodeidx = biggerChildidx
-			else:
-				return
-			
-	def swap(self, parentidx, childidx):
-		'''
-		Functions for swamp the items in the heap
-		'''		
-		tempVal = self._heap[parentidx]
-		self._heap[parentidx] = self._heap[childidx]
-		self._heap[childidx] = tempVal
-		
-		# after finishing swap, update the indices in the _heapIndices dic
-		self._heapIndices[self._heap[parentidx][1]] = parentidx
-		self._heapIndices[self._heap[childidx][1]] = childidx
-		
+			while index !=1:
+				numOfParentNode = index//2
+
+				if self._heap[numOfParentNode][0] < self._heap[index][0]:
+					self._heap[numOfParentNode], self._heap[index] = self._heap[index], self._heap[numOfParentNode]
+					index = numOfParentNode
+				else:
+					break
+
+		returnValue = True
+		self.currentSize += 1
+		return returnValue
+
 	def extractMax(self):
 		'''
 		Key method2: This method removes and returns the tuple with the highest
 		priority.
-		'''		
+		'''
 		if self.isEmpty():		# raises an QueueIsEmpty exception if PQ is empty
 			raise QueueIsEmpty("The method is called when the PQ is empty.")
-		
-		if self.hasLeftChild(0):
-			self.swap(0, (len(self._heap)-1))
+		elif len(self._heap) == 1:
 			popped = self._heap.pop()
-			self.maxHeapifDown(0)		# reorders the heap after extraction
-			self.currentSize-=1			# downsize the heap
-		elif len(self._heap) == 1:		# if heap has only one item
-			popped = self._heap.pop()
-			self.currentSize-=1
-		del self._heapIndices[popped[1]] # reorders the heap index
+			self.currentSize -= 1
+		else:
+			self._heap[1], self._heap[-1] = self._heap[-1], self._heap[1]
+			popped = self._heap.pop(-1)
+			self.maxHeapify(1)
+			self.currentSize -= 1
 		return popped
+
+	def maxHeapify(self, i):
+		left = i*2
+		right = i*2 +1
+		greatest = i
+
+		if left < len(self._heap) and self._heap[left][0] > self._heap[greatest][0]:
+			greatest = left
+		if right <len(self._heap) and self._heap[right][0] > self._heap[greatest][0]:
+			greatest = right
+		if greatest != i:
+			self._heap[i], self._heap[greatest] = self._heap[greatest], self._heap[i]
+			self.maxHeapify(greatest)
 
 	def peekMax(self):
 		'''
 		Key method3: This method returns the tuple with the highest priority.
-		'''		
+		'''
 		if self.isEmpty():		# if the queue is empty, it will return False
 			return False
-
-		if self.hasLeftChild(0):
-			self.swap(0, (len(self._heap)-1))
-			print(self._heap[-1])
-			self.maxHeapifDown(0)
 		elif len(self._heap) == 1:
-			print(self._heap[-1])
+			popped = self._heap[-1]
+		else:
+			self._heap[1], self._heap[-1] = self._heap[-1], self._heap[1]
+			popped = self._heap[-1]
+			self.maxHeapify(1)
+		return popped
 
 	def heapSort(self,lst):
 		'''
 		Extra method: This method sorts the given list of tuples.
-		'''	
+		'''
 		if((type(lst) != list)):
 			raise HeapSortInputError("ERROR: The lst must be a list ") # error handling for type
 		else:
 			for item in lst:
 				list1 = self.insert(item)
 				list1 = self._heap
-			
+
 			output = []
-			
+
 			for i in range(len(list1)):
 				list1 = self
 				popped = self.extractMax()
 				output.append(popped)
+
 			return output
