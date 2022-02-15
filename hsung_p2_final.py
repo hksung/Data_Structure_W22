@@ -6,7 +6,7 @@ Created on Fri Feb 2
 
 Program: CIS 313 Project2 - PriorityQueue
 Author: Hakyung Sung
-Submit date: 02/07/22
+Submit date: 02/09/22
 Description: a program that implements the max-heap variety of priority queues
 
 """
@@ -15,7 +15,6 @@ Description: a program that implements the max-heap variety of priority queues
 '''
 prep: classes for error handling
 '''
-
 
 class QueueCapacityTypeError(Exception):
 	'''
@@ -437,5 +436,5 @@ class PriorityQueue:
 				list1 = self
 				popped = self.extractMax()
 				output.append(popped)
-
 			return output
+		
