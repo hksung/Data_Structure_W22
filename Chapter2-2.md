@@ -18,7 +18,7 @@
 <img width="185" alt="image" src="https://user-images.githubusercontent.com/84297888/149681473-6576d483-f603-434a-923f-0eac93a30d59.png">
 <img width="524" alt="image" src="https://user-images.githubusercontent.com/84297888/149681489-fd1dd5f4-58ff-41fb-844f-5795e6475374.png">
 
-- We can express this worse-case running times as an^2+bn+c for constants a, b, and c that again depend on the statement costs ci; it is thus a quadratic function of n.
+- We can express this worse-case running times as $$an^2+bn+c$$ for constants a, b, and c that again depend on the statement costs ci; it is thus a quadratic function of n.
 
 
 ### Worse-case and average-case analysis
@@ -30,8 +30,8 @@
 ### Order of growth
 We use some simplifying abstractions to see our analysis of the Insertion-sort procedure.
 1. We ignore the actual cost of each statement, using the constant Ci to represent these costs.
-2. We observe that even these constants give us more detail than we really need: we expressed the worst-case running time as an^2+bn+c for some constants a, b, and c that depend on the statement costs ci.
+2. We observe that even these constants give us more detail than we really need: we expressed the worst-case running time as $$an^2+bn+c$$ for some constants a, b, and c that depend on the statement costs ci.
 3. We thus ignored not only the actual statement costs, but also the abstract costs ci.
 
-- The rate of growth, or order of growth, of the running time: consider only the leading term of a formula (e.g., an^2)
+- The rate of growth, or order of growth, of the running time: consider only the leading term of a formula (e.g., $$an^2$$)
 - theta-notation
