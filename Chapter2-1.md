@@ -39,7 +39,7 @@ for i in range(len(arr)):
 - if i=1, j=0
 - arr[0] = the original element
 - the original element is arranged
-	(4) therefore, before the loop iteration, the loop variant is true.
+- therefore, before the loop iteration, the loop variant is true.
 
 2. maintenance (while repetition of the works)
 - the body of the for loop works by moving A[j-1], A[j-2], A[j-3] and so on by one position to right until it finds the proper position for A[j], at which point it inserts the value of A[j].
