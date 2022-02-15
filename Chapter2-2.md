@@ -1,6 +1,6 @@
 ## Introduction to Algorithm _ Chapter 2-2. Analyzing Algorithm
 
-- The time taken by an algorithm grows with the size of the input, so it is traditional to describe the running time of a program as a function of the size of its input. To do so, we need to defind the terms 'running time' and 'size of input' more carefully.
+- The time taken by an algorithm grows with the size of the input, so it is traditional to describe the running time of a program as a function of the size of its input. To do so, we need to define the terms 'running time' and 'size of input' more carefully.
 
 - Input size: *the number of items in the input* (e.g., the array size *n* for sorting)
 
