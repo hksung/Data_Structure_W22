@@ -241,3 +241,31 @@ A linked list is a data structure in which the objects are arranged in a linear 
 
 > A list implements an ordered collection of values, which may include repetitions. Specifically, a singly linked list is a data structure that contains a sequence of nodes such that each node contains an object and a reference to the next node in the list. The first node is referred to as the head and the last node is referred to as the tail; the tail's next field is null. There are many variants of the linked lists like a singly linked list, a doubly linked list, and a circular, doubly linked list with a sentinel
 A list is similar to an array in that it contains objects in linear order. The key differences are that inserting and deleting elements in a list hasz time complexity O(1). On the other hand, obtaining the kth element in a list is expensive, having O(n) time complexity.
+
+#### 10.2-5 Implement the dictionary operations INSERT, DELETE, and SEARCH using singly linked, circular lists. What are the running times of your procedures?
+
+- INSERT: *O(1)*
+
+```Python
+LIST-INSERT(L, x)
+  x.next = L.nil.next
+  L.nil.next = x
+```
+
+- DELETE: *O(n)*
+
+```Python
+LIST-DELETE(L, x)
+  prev = L.nil
+  while pre.next !=x
+  if prev.next == L.nil
+  error "element not exist"
+  prev = prev.next
+  prev.next = x.next
+```
+- SEARCH: *O(n)*
+LIST-SEARCH(L, k)
+  x = L.nil.next
+  while x != L.nil and x.key !=k
+  x = x.next
+  return x
