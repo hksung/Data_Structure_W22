@@ -31,22 +31,20 @@ for i in range(len(arr)):
     print("%d" %arr[i])
 ```
 
-### Loop Invariant
-- the properties of A[1...j-1] formally as a loop variant. At the start of each iteration of the for loop of lines 1-8, the subarray A[1...j-1] consists of the elements originally in A[1...j-1], but in sorted order
-- use loop invariants to help us understand why an algorithm is correct
+### Loop Invariant (Book: *Algorithms Unlocked*. (2013), pp.21-22)
+- One common method of showing correctness uses a **loop invariant**: an assertion that we demonstrate to be true each time we start a loop iteration. For a loop invariant to help us argue correctness, we have to show three things about it.
 
-1. initialization (i=1)
-- if i=1, j=0
-- arr[0] = the original element
-- the original element is arranged
-- therefore, before the loop iteration, the loop variant is true.
+1. Initialization: It is true before the first iteration of the loop.
+2. Maintenance: If it is true before an iteration of the loop, it remains true before the next iteration.
+3. Termination: The loop terminates, and when it does, the loop invariant, along with the reason that the loop terminated, gives us a useful property.
 
-2. maintenance (while repetition of the works)
-- the body of the for loop works by moving A[j-1], A[j-2], A[j-3] and so on by one position to right until it finds the proper position for A[j], at which point it inserts the value of A[j].
-- incrementing j for the next iteration of the for loop then preserves the loop invariant
+  Example: At the start of each iteration of step 1, if x is present in the array A, then it is present in the subarray (a contiguous portion of an array) from A[i] through A[n].
 
-3. termination
-- the condition causing for the for loop to terminate is that j>A.length = n
+- Loop Invariant in the above example:
+    - Iteration: Initially, i = 1 so that the subarray in the loop invariant is A[1] through A[n], which is the entire array.
+    - Maintenance: Assume that at the start of an iteration for a value of i, if x is present in the array A, then it is present in the subarray from A[i] through A[n]. If we get through this iteration without returning, we know that A[i] is not x, and therfore we can say that if x is present in the array A, then it is present in the subarray from A[i+1] through A[n]. Because i is incremented before the next iteration, the loop invariant will hold before the next iteration.
+    - Termination: This loop must terminate, either because the procedure returns in step 1A or i>n. We have already handled the case where the loop terminates because the procedure returns in step 1A.
+    To hanle the case where the loop terminates because i>n, we rely on the contrapositive of the loop invariant. The contrapositive of the statement "if A then B" is "if not B then A." The contrapositive of a statement is true if and only if the statement is true. The contrapositive of the loop invariant is "if x is not present in the subarray from A[i] through A[n], then it is not present in the array A."
 
 ### Objects (https://wikidocs.net/20456)
 <details>
