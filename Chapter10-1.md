@@ -264,8 +264,11 @@ LIST-DELETE(L, x)
   prev.next = x.next
 ```
 - SEARCH: *O(n)*
+
+```python
 LIST-SEARCH(L, k)
   x = L.nil.next
   while x != L.nil and x.key !=k
   x = x.next
   return x
+```
