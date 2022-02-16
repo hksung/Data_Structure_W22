@@ -231,7 +231,7 @@ TAIL-DEQUEUE(Q)
     return x
 ```
 
-> Think about how to implement a queue using two stacks, and also how to implement a stack using two queues.
+> * Think about how to implement a queue using two stacks, and also how to implement a stack using two queues.
 
 ### 10-2. Linked lists
 
@@ -240,5 +240,4 @@ A linked list is a data structure in which the objects are arranged in a linear 
 (Book: *Elements of Programming Interviews in Python*. (2019), Chapter 7.)
 
 > A list implements an ordered collection of values, which may include repetitions. Specifically, a singly linked list is a data structure that contains a sequence of nodes such that each node contains an object and a reference to the next node in the list. The first node is referred to as the head and the last node is referred to as the tail; the tail's next field is null. There are many variants of the linked lists like a singly linked list, a doubly linked list, and a circular, doubly linked list with a sentinel
-
-> A list is similar to an array in that it contains objects in linear order. The key differences are that inserting and deleting elements in a list hasz time complexity O(1). On the other hand, obtaining the kth element in a list is expensive, having O(n) time complexity.
+A list is similar to an array in that it contains objects in linear order. The key differences are that inserting and deleting elements in a list hasz time complexity O(1). On the other hand, obtaining the kth element in a list is expensive, having O(n) time complexity.
