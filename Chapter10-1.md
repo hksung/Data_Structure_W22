@@ -1,9 +1,11 @@
-### 10-1. Elementary Data Structures: Stacks and Queue
+## Introduction to Algorithm _ Chapter 10. Elementary Data Structures
+
+### 10-1. Stacks and Queue
 
 - LIFO: stack
 - FIFO: queue
 
-#### Stacks 
+#### Stacks
 
     - PUSH: insertion operation
     - POP: deletion operation, which does not take an element argument
@@ -14,7 +16,7 @@
 #### Queue
     - ENQUEUE: insertion operation
     - DEQUEUE: deletion operation
-    
+
 - Figure 10.2
 <img width="315" alt="image" src="https://user-images.githubusercontent.com/84297888/150425205-b3c5d582-a8c2-43a6-97e2-90257ac3902e.png">
 
@@ -39,7 +41,7 @@ class Queue:
         self.start = None
         self.end = None
         self.count = 0
-    
+
     def push(self, x):
         if self.empty():
             elem = LinkedListElement(x, None, None)
@@ -50,7 +52,7 @@ class Queue:
             self.end = elem
         self.count += 1
         return
-    
+
     def pop(self):
         if self.empty(): return -1
         elif self.size() == 1:
@@ -63,18 +65,18 @@ class Queue:
             self.start.prev = None
         self.count -= 1
         return start
-    
+
     def size(self):
         return self.count
-    
+
     def empty(self):
         if self.count == 0: return 1
         return 0
-    
+
     def front(self):
         if self.empty(): return -1
         return self.start.value
-    
+
     def back(self):
         if self.empty(): return -1
         return self.end.value
@@ -228,3 +230,15 @@ TAIL-DEQUEUE(Q)
     x = Q[Q.tail]
     return x
 ```
+
+> Think about how to implement a queue using two stacks, and also how to implement a stack using two queues.
+
+### 10-2. Linked lists
+
+A linked list is a data structure in which the objects are arranged in a linear order. Unlike an array, however, in which the linear order is determined by the array indices, the order in a linked list is determined by a pointer in each object.
+
+(Book: *Elements of Programming Interviews in Python*. (2019), Chapter 7.)
+
+> A list implements an ordered collection of values, which may include repetitions. Specifically, a singly linked list is a data structure that contains a sequence of nodes such that each node contains an object and a reference to the next node in the list. The first node is referred to as the head and the last node is referred to as the tail; the tail's next field is null. There are many variants of the linked lists like a singly linked list, a doubly linked list, and a circular, doubly linked list with a sentinel
+
+> A list is similar to an array in that it contains objects in linear order. The key differences are that inserting and deleting elements in a list hasz time complexity O(1). On the other hand, obtaining the kth element in a list is expensive, having O(n) time complexity.
