@@ -38,9 +38,13 @@ for i in range(len(arr)):
 2. Maintenance: If it is true before an iteration of the loop, it remains true before the next iteration.
 3. Termination: The loop terminates, and when it does, the loop invariant, along with the reason that the loop terminated, gives us a useful property.
 
-  Example: At the start of each iteration of step 1, if x is present in the array A, then it is present in the subarray (a contiguous portion of an array) from A[i] through A[n].
+```
+[Example]
+At the start of each iteration of step 1, if x is present in the array A, 
+then it is present in the subarray (a contiguous portion of an array) from A[i] through A[n].
+```
 
-- Loop Invariant in the above example:
+- Loop Invariant in the above [Example]
     - Iteration: Initially, i = 1 so that the subarray in the loop invariant is A[1] through A[n], which is the entire array.
     - Maintenance: Assume that at the start of an iteration for a value of i, if x is present in the array A, then it is present in the subarray from A[i] through A[n]. If we get through this iteration without returning, we know that A[i] is not x, and therfore we can say that if x is present in the array A, then it is present in the subarray from A[i+1] through A[n]. Because i is incremented before the next iteration, the loop invariant will hold before the next iteration.
     - Termination: This loop must terminate, either because the procedure returns in step 1A or i>n. We have already handled the case where the loop terminates because the procedure returns in step 1A.
