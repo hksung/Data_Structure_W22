@@ -276,7 +276,7 @@ LIST-SEARCH(L, k)
 ### 10-4. Representing rooted trees
 
 <details>
-    <summary> 선형구조와 비선형구조, [참고]https://server-engineer.tistory.com/130) </summary>
+    <summary> 선형구조와 비선형구조 (https://server-engineer.tistory.com/130) </summary>
     <div>
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/84297888/154380391-07f6d688-267f-41f0-9fee-5036e6a3764b.png">
 
