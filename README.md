@@ -11,7 +11,7 @@
 - [Chapter2_2: Exercise](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter2-2_ex.md)
 - [loop invariant exmple](https://github.com/hksung/Data_Structure_Win22/blob/main/loopInv.pdf)
 - [loop invariant exmple2](https://github.com/hksung/Data_Structure_Win22/blob/main/loop-invariant.pdf)
-- [Chapter10: Elementary Data Structures](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter10-1.md)
+- [Chapter10: Elementary Data Structures: Stack, Queue, Binary Tree](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter10-1.md)
 
 ## Coding Assignments
 - [Assigment0: complex number](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p0.py)
