@@ -272,3 +272,26 @@ LIST-SEARCH(L, k)
   x = x.next
   return x
 ```
+
+### 10-4. Representing rooted trees
+
+<details>
+    <summary> (선형구조와 비선형구조, [참고](https://server-engineer.tistory.com/130)) </summary>
+    <div>
+
+
+1. 선형구조: 배열(선형 리스트), 연결 리스트, 스택, 큐, 데크 (double ended queue)
+- 데이터가 연속적으로 연결되어 있는 모양으로 구성하는 방법
+- 포인터 등을 사용하여 자료를 연결하면 그 결과가 자료에 일직선상에 표시되거나 하나의 원상에 표시되는 구조
+
+
+2. 비선형구조: 트리, 그래프
+  2-1. 트리
+  - 정점(node)과 선분(branch)을 사용하여 사이클을 이루지 않도록 구성한 그래프의 형태
+  - 방향성 있음(부모와 자식 계층 구조가 명확)
+
+  2-2. 그래프
+  - 정점(node)과 선분(branch)을 이용하여 사이클을 이루도록 구성
+  - 순환성  
+</div>
+</details>
