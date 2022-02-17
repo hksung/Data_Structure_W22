@@ -308,12 +308,12 @@ LIST-SEARCH(L, k)
         
 2. 비선형구조: 트리, 그래프
         
-    1. 트리
+> 트리
 - 정점(node)과 선분(branch)을 사용하여 사이클을 이루지 않도록 구성한 그래프의 형태
 - 방향성 있음(부모와 자식 계층 구조가 명확)
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381229-990b9889-b41f-433c-afd5-24fd69c55c8a.png">
         
-    2. 그래프
+> 그래프
 - 정점(node)과 선분(branch)을 이용하여 사이클을 이루도록 구성
 - 순환성
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381297-379f8944-0353-4c2e-9888-3600fc4052c1.png">
