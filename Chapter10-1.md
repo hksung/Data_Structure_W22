@@ -276,47 +276,27 @@ LIST-SEARCH(L, k)
 ### 10-4. Representing rooted trees
 
 <details>
-    <summary> 선형구조와 비선형구조 (https://server-engineer.tistory.com/130) </summary>
+    <summary> (선형구조와 비선형구조, [참고](https://server-engineer.tistory.com/130)) </summary>
     <div>
-<img width="350" alt="image" src="https://user-images.githubusercontent.com/84297888/154380391-07f6d688-267f-41f0-9fee-5036e6a3764b.png">
+
 
 1. 선형구조: 배열(선형 리스트), 연결 리스트, 스택, 큐, 데크 (double ended queue)
 - 데이터가 연속적으로 연결되어 있는 모양으로 구성하는 방법
 - 포인터 등을 사용하여 자료를 연결하면 그 결과가 자료에 일직선상에 표시되거나 하나의 원상에 표시되는 구조
-        
-> 연결리스트   
-- 자료 항목의 순서에 따라 노드의 포인터 부분을 이용하여 서로 연결시킨 자료구조
-- 노드의 삽입, 삭제 작업이 용이
-- 기억 공간이 연속적으로 놓여있지 않아도 저장 가능
-- 접근 속도가 느림 (포인터를 찾아가는 시간이 필요)
-- 중간 노드의 연결이 끊어지면, 그 다음 노드를 찾기 힘듦
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381088-a5f39fdb-74fa-41cb-9876-975a01e8ae8f.png">
 
-> 스택
-- 리스트의 한쪽 끝으로만 자료의 삽입, 삭제 작업이 이루어짐
-- 인터럽트가 발생하여 복귀주소를 저장할 때 사용
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381116-f379545d-0058-40bf-a1e3-1fc5ef4bbbd9.png">
 
-> 큐
-- 시작과 끝을 표시하는 두 개의 포인터가 존재
-- 순서를 기다리는 대기 행렬 처리에 사용
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381152-5fdfcf9a-c87c-436e-b494-8c952155878d.png">
-
-> 데크 
-- 삽입과 삭제가 리스트 양쪽 끝에서 모두 발생할 수 있는 자료구조
-- 입력이 한쪽에서만 발생하고 출력은 양쪽에서 가능, 입력은 양쪽에서 일어나고 출력은 한쪽에서만 이루어지는 제한 가능
-        
 2. 비선형구조: 트리, 그래프
-        
-> 트리
-- 정점(node)과 선분(branch)을 사용하여 사이클을 이루지 않도록 구성한 그래프의 형태
-- 방향성 있음(부모와 자식 계층 구조가 명확)
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381229-990b9889-b41f-433c-afd5-24fd69c55c8a.png">
-        
-> 그래프
-- 정점(node)과 선분(branch)을 이용하여 사이클을 이루도록 구성
-- 순환성
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/84297888/154381297-379f8944-0353-4c2e-9888-3600fc4052c1.png">
+  2-1. 트리
+  - 정점(node)과 선분(branch)을 사용하여 사이클을 이루지 않도록 구성한 그래프의 형태
+  - 방향성 있음(부모와 자식 계층 구조가 명확)
 
+  2-2. 그래프
+  - 정점(node)과 선분(branch)을 이용하여 사이클을 이루도록 구성
+  - 순환  
 </div>
 </details>
+
+* Various tree representations
+- We sometimes represent rooted trees in other ways.
+- Chapter 6: a heap, which is based on a complete binary tree, by a single array plus the index of the last node in the heap.
+- Chapter 21: traversed only toward the root, and so only the parent pointers are present; there are no pointers to children
