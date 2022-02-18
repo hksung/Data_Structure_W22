@@ -13,7 +13,7 @@
 - [loop invariant exmple2](https://github.com/hksung/Data_Structure_Win22/blob/main/loop-invariant.pdf)
 - [Chapter10: Elementary Data Structures: Stack, Queue, Binary Tree](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter10-1.md)
 - [Chapter6: Heap](https://github.com/hksung/Data_Structure_Win22/blob/main/Chapter6.md)
-- 
+
 ## Coding Assignments
 - [Assigment0: complex number](https://github.com/hksung/Data_Structure_Win22/blob/main/hsung_p0.py)
 - [test_p0](https://github.com/hksung/Data_Structure_Win22/blob/main/p0_test.py)
