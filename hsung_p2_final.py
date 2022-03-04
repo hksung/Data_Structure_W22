@@ -411,12 +411,8 @@ class PriorityQueue:
 		'''
 		if self.isEmpty():		# if the queue is empty, it will return False
 			return False
-		elif len(self._heap) == 1:
-			popped = self._heap[-1]
 		else:
-			self._heap[1], self._heap[-1] = self._heap[-1], self._heap[1]
-			popped = self._heap[-1]
-			self.maxHeapify(1)
+			popped = self._heap[0]
 		return popped
 
 	def heapSort(self,lst):
@@ -427,14 +423,11 @@ class PriorityQueue:
 			raise HeapSortInputError("ERROR: The lst must be a list ") # error handling for type
 		else:
 			for item in lst:
-				list1 = self.insert(item)
-				list1 = self._heap
-
+				self.insert(item)
+				
 			output = []
 
-			for i in range(len(list1)):
-				list1 = self
+			for i in range(len(lst)):
 				popped = self.extractMax()
 				output.append(popped)
 			return output
-		
