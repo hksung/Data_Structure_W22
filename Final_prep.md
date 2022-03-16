@@ -72,7 +72,7 @@ which keeps the height of the tree relatively small.
   - 각 노드는 red / black
   - 루트 노드(최상단 노드)는 black
   - 모든 리프 노드(최하단 노드)는 black 
-  - red 노드의 하식들은 모두 black (red-red 연속 불가)
+  - red 노드의 자식들은 모두 black (red-red 연속 불가)
   - 모든 노드에 대해서 그 노드의 자손인 리프 노드에 이르는 모든 경로에는 동일한 개수의 black 노드 존재
   - red-red가 연속되면 --> 좌우로 회전
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/84297888/158667139-44375a7a-d327-4603-bee3-0bb298d7afe6.png">
